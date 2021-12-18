@@ -2,12 +2,12 @@
 
 // Name: Phillip Smith
 // 
-// Solution: FactoryPattern
+// Solution: SeeSharp
 // Project: SeeSharp.FactoryPattern
 // File Name: Program.cs
 // 
 // Current Data:
-// 2021-12-18 11:42 AM
+// 2021-12-18 12:35 PM
 // 
 // Creation Date:
 // 2021-12-18 11:10 AM
@@ -27,6 +27,12 @@ namespace SeeSharp.FactoryPattern
   {
     public static void Main()
     {
+      /*
+       * The Factory Pattern can be used to instantiate object on your behalf.
+       * This can allow for more abstract and dynamic code, especially when fitted
+       * into other pattern, such as the strategy pattern.
+       */
+
       var factory = new GenericFactory<IBinaryOperation>();
       factory.Register<AdditionOperation>("addition");
       factory.Register<SubtractionOperation>("subtraction");
