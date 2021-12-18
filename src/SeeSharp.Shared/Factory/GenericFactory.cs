@@ -16,12 +16,6 @@
 
 namespace SeeSharp.Shared.Factory
 {
-  public interface IFactory<T>
-  {
-    public void Register<TType>(string key) where TType : T;
-    public T Create(string key);
-  }
-
   public class GenericFactory<T> : IFactory<T>
   {
     private readonly Dictionary<string, Func<T>> _registry = new();
